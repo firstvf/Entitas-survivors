@@ -1,3 +1,6 @@
 ﻿src/Entitas-survivors.sln
 src/Entitas-survivors/Library
 src/Entitas-survivors/Logs
+src/Entitas-survivors/Temp
+src/Entitas-survivors/obj
+src/Entitas-survivors/.vs
