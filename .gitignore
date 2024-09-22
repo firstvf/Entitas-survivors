@@ -2,3 +2,5 @@
 src/Logs
 src/.vsconfig
 src/Entitas-survivors.sln
+src/Entitas-survivors/Library
+src/Entitas-survivors/Logs
