@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using Entitas;
 using UnityEngine;
 
 public class Exercise : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Exercise()
     {
-        
-    }
+        GameEntity entity = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int id = entity.Id;
+
+
+        entity
+            .AddId(1)
+            .AddWorldPosition(Vector3.zero);
     }
 }
+
+public class Id : IComponent { public int Value; }
+public class WorldPosition : IComponent { public Vector3 Value; }
+public class NewNewPosition : IComponent { public Vector3 Value; }
