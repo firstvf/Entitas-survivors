@@ -76,8 +76,10 @@
     <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
     <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
+    <Compile Include="Assets\Code\Infrastructure\EcsRunner.cs" />
     <Compile Include="Assets\Code\Common\SelfDestructor.cs" />
     <Compile Include="Assets\Code\Generated\Contexts.cs" />
+    <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
     <Compile Include="Assets\Code\Generated\Feature.cs" />
     <Compile Include="Assets\Code\Generated\Meta\MetaContext.cs" />
     <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameAttribute.cs" />
     <Compile Include="Assets\Code\Common\Entity\CreateEntity.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementFeature.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\SceneLoader.cs" />
     <Compile Include="Assets\Code\Gameplay\Input\Service\StandaloneInputService.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameContext.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="Assets\Code\Generated\Meta\MetaComponentsLookup.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameSpeedComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Random\UnityRandomService.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameMovingComponent.cs" />
     <Compile Include="Assets\Code\Common\Extensions\NumericExtensions.cs" />
     <Compile Include="Assets\Code\Gameplay\StaticData\IStaticDataService.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementComponents.cs" />

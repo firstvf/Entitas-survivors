@@ -11,14 +11,16 @@ public static class GameComponentsLookup {
     public const int Id = 0;
     public const int WorldPosition = 1;
     public const int Direction = 2;
-    public const int Speed = 3;
+    public const int Moving = 3;
+    public const int Speed = 4;
 
-    public const int TotalComponents = 4;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "Id",
         "WorldPosition",
         "Direction",
+        "Moving",
         "Speed"
     };
 
@@ -26,6 +28,7 @@ public static class GameComponentsLookup {
         typeof(Assets.Code.Gameplay.Common.Id),
         typeof(Assets.Code.Gameplay.Common.WorldPosition),
         typeof(Assets.Code.Gameplay.Features.Movement.Direction),
+        typeof(Assets.Code.Gameplay.Features.Movement.Moving),
         typeof(Assets.Code.Gameplay.Features.Movement.Speed)
     };
 }
