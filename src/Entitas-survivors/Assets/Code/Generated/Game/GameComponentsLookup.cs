@@ -10,19 +10,22 @@ public static class GameComponentsLookup {
 
     public const int Id = 0;
     public const int WorldPosition = 1;
-    public const int Speed = 2;
+    public const int Direction = 2;
+    public const int Speed = 3;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
         "Id",
         "WorldPosition",
+        "Direction",
         "Speed"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(Assets.Code.Gameplay.Common.Id),
         typeof(Assets.Code.Gameplay.Common.WorldPosition),
+        typeof(Assets.Code.Gameplay.Features.Movement.Direction),
         typeof(Assets.Code.Gameplay.Features.Movement.Speed)
     };
 }

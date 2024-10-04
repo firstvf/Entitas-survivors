@@ -94,6 +94,7 @@
     <Compile Include="Assets\Code\Generated\Input\InputContext.cs" />
     <Compile Include="Assets\Code\Generated\Input\InputComponentsLookup.cs" />
     <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameAttribute.cs" />
     <Compile Include="Assets\Code\Common\Entity\CreateEntity.cs" />
