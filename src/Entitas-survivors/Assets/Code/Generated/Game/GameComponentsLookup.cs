@@ -9,20 +9,23 @@
 public static class GameComponentsLookup {
 
     public const int Id = 0;
-    public const int Transform = 1;
-    public const int WorldPosition = 2;
-    public const int Hero = 3;
-    public const int HeroAnimator = 4;
-    public const int Direction = 5;
-    public const int Moving = 6;
-    public const int Speed = 7;
-    public const int AxisInput = 8;
-    public const int Input = 9;
+    public const int SpriteRenderer = 1;
+    public const int Transform = 2;
+    public const int WorldPosition = 3;
+    public const int Hero = 4;
+    public const int HeroAnimator = 5;
+    public const int Direction = 6;
+    public const int Moving = 7;
+    public const int Speed = 8;
+    public const int TurnedAlongDirection = 9;
+    public const int AxisInput = 10;
+    public const int Input = 11;
 
-    public const int TotalComponents = 10;
+    public const int TotalComponents = 12;
 
     public static readonly string[] componentNames = {
         "Id",
+        "SpriteRenderer",
         "Transform",
         "WorldPosition",
         "Hero",
@@ -30,12 +33,14 @@ public static class GameComponentsLookup {
         "Direction",
         "Moving",
         "Speed",
+        "TurnedAlongDirection",
         "AxisInput",
         "Input"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(Assets.Code.Gameplay.Common.Id),
+        typeof(Assets.Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Assets.Code.Gameplay.Common.TransformComponent),
         typeof(Assets.Code.Gameplay.Common.WorldPosition),
         typeof(Assets.Code.Gameplay.Features.Hero.Hero),
@@ -43,6 +48,7 @@ public static class GameComponentsLookup {
         typeof(Assets.Code.Gameplay.Features.Movement.Direction),
         typeof(Assets.Code.Gameplay.Features.Movement.Moving),
         typeof(Assets.Code.Gameplay.Features.Movement.Speed),
+        typeof(Assets.Code.Gameplay.Features.Movement.TurnedAlongDirection),
         typeof(Assets.Code.Gameplay.Input.AxisInput),
         typeof(Assets.Code.Gameplay.Input.Input)
     };

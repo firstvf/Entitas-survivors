@@ -88,6 +88,7 @@
     <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
     <Compile Include="Assets\Code\Generated\Feature.cs" />
     <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
@@ -112,10 +113,13 @@
     <Compile Include="Assets\Code\Infrastructure\Installers\LevelInitializable.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Physics\IPhysicsService.cs" />
     <Compile Include="Assets\Code\Common\Entity\ToStrings\GameEntity.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\SwitchToEntrySceneInEditor.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroRegistrar.cs" />
+    <Compile Include="Assets\Code\Gameplay\Cameras\Systems\CameraFollowHeroSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\ISceneLoader.cs" />
     <Compile Include="Assets\Code\Gameplay\Levels\ILevelDataProvider.cs" />
     <Compile Include="Assets\Code\Common\Extensions\EnumerableExtensions.cs" />
