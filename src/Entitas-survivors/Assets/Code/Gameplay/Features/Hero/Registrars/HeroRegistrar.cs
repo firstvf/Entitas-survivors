@@ -18,7 +18,7 @@ namespace Assets.Code.Gameplay.Features.Hero.Registrars
             _entity = CreateEntity
                 .Empty()
                 .AddTransform(transform)
-                .AddWorldPosition(transform.position)
+                .AddWorldPosition(transform.position) 
                 .AddDirection(Vector2.zero)
                 .AddSpeed(Speed)
                 .AddHeroAnimator(heroAnimator)

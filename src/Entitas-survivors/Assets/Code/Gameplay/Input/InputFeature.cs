@@ -1,14 +1,14 @@
 ﻿using Assets.Code.Gameplay.Input.Systems;
-using Code.Gameplay.Input.Service;
+using Assets.Code.Infrastructure.Systems;
 
 namespace Assets.Code.Gameplay.Input
 {
     public class InputFeature : Feature
     {
-        public InputFeature(GameContext game, IInputService inputService)
+        public InputFeature(ISystemFactory systems)
         {
-            Add(new InitializeInputSystem());
-            Add(new EmitInputSystem(game, inputService));
+            Add(systems.Create<InitializeInputSystem>());
+            Add(systems.Create<EmitInputSystem>());
         }
     }
 }
