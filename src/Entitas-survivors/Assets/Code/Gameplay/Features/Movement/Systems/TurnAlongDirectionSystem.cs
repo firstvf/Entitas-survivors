@@ -1,5 +1,6 @@
 ﻿using Code.Common.Extensions;
 using Entitas;
+using System;
 using UnityEngine;
 
 namespace Assets.Code.Gameplay.Features.Movement.Systems
@@ -13,8 +14,8 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
             _movers = game.GetGroup(GameMatcher
                 .AllOf(
                 GameMatcher.TurnedAlongDirection,
-                GameMatcher.SpriteRenderer,
-                GameMatcher.Direction
+                GameMatcher.Direction,
+                GameMatcher.SpriteRenderer
                 ));
         }
 
@@ -22,11 +23,12 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
         {
             foreach (var mover in _movers)
             {
-                if (mover.Direction.x > 0 && mover.SpriteRenderer.transform.localScale.x != 1)
-                    mover.SpriteRenderer.transform.SetScaleX(1);
-                else if (mover.Direction.x < 0 && mover.SpriteRenderer.transform.localScale.x != -1)
-                    mover.SpriteRenderer.transform.SetScaleX(-1);
+                float scale = Mathf.Abs(mover.SpriteRenderer.transform.localScale.x);
+                mover.SpriteRenderer.transform.SetScaleX(scale * FaceDirection(mover));
             }
         }
+
+        private float FaceDirection(GameEntity mover)
+        => mover.Direction.x <= 0 ? -1 : 1;
     }
 }

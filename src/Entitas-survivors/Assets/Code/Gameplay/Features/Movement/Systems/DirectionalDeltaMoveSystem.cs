@@ -24,7 +24,7 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
         {
             foreach (var mover in _movers)
                 if (mover.isMoving)
-                    mover.ReplaceWorldPosition((Vector2)mover.WorldPosition + mover.Direction * mover.Speed * _timeService.DeltaTime);
+                    mover.ReplaceWorldPosition((Vector2)mover.WorldPosition + _timeService.DeltaTime * mover.Speed * mover.Direction);
         }
     }
 }
