@@ -11,35 +11,61 @@ public static class GameComponentsLookup {
     public const int Destructed = 0;
     public const int SelfDestructTimer = 1;
     public const int View = 2;
-    public const int Id = 3;
-    public const int SpriteRenderer = 4;
-    public const int Transform = 5;
-    public const int WorldPosition = 6;
-    public const int Hero = 7;
-    public const int HeroAnimator = 8;
-    public const int Direction = 9;
-    public const int Moving = 10;
-    public const int Speed = 11;
-    public const int TurnedAlongDirection = 12;
-    public const int AxisInput = 13;
-    public const int Input = 14;
+    public const int Damage = 3;
+    public const int DamageTakenAnimator = 4;
+    public const int Id = 5;
+    public const int SpriteRenderer = 6;
+    public const int Transform = 7;
+    public const int WorldPosition = 8;
+    public const int Enemy = 9;
+    public const int EnemyAnimator = 10;
+    public const int EnemyTypeId = 11;
+    public const int Hero = 12;
+    public const int HeroAnimator = 13;
+    public const int CurrentHP = 14;
+    public const int MaxHP = 15;
+    public const int Direction = 16;
+    public const int Moving = 17;
+    public const int Speed = 18;
+    public const int TurnedAlongDirection = 19;
+    public const int CollectTargetsInterval = 20;
+    public const int CollectTargetsTimer = 21;
+    public const int LayerMask = 22;
+    public const int Radius = 23;
+    public const int ReadyToCollectTargets = 24;
+    public const int TargetsBuffer = 25;
+    public const int AxisInput = 26;
+    public const int Input = 27;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 28;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "SelfDestructTimer",
         "View",
+        "Damage",
+        "DamageTakenAnimator",
         "Id",
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "Enemy",
+        "EnemyAnimator",
+        "EnemyTypeId",
         "Hero",
         "HeroAnimator",
+        "CurrentHP",
+        "MaxHP",
         "Direction",
         "Moving",
         "Speed",
         "TurnedAlongDirection",
+        "CollectTargetsInterval",
+        "CollectTargetsTimer",
+        "LayerMask",
+        "Radius",
+        "ReadyToCollectTargets",
+        "TargetsBuffer",
         "AxisInput",
         "Input"
     };
@@ -48,16 +74,29 @@ public static class GameComponentsLookup {
         typeof(Assets.Code.Common.Destructed),
         typeof(Assets.Code.Common.SelfDestructTimer),
         typeof(Assets.Code.Common.View),
+        typeof(Assets.Code.Gameplay.Common.Damage),
+        typeof(Assets.Code.Gameplay.Common.DamageTakenAnimatorComponent),
         typeof(Assets.Code.Gameplay.Common.Id),
         typeof(Assets.Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Assets.Code.Gameplay.Common.TransformComponent),
         typeof(Assets.Code.Gameplay.Common.WorldPosition),
+        typeof(Assets.Code.Gameplay.Features.Enemies.Enemy),
+        typeof(Assets.Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
+        typeof(Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),
         typeof(Assets.Code.Gameplay.Features.Hero.Hero),
         typeof(Assets.Code.Gameplay.Features.Hero.HeroAnimatorComponent),
+        typeof(Assets.Code.Gameplay.Features.Lifetime.CurrentHP),
+        typeof(Assets.Code.Gameplay.Features.Lifetime.MaxHP),
         typeof(Assets.Code.Gameplay.Features.Movement.Direction),
         typeof(Assets.Code.Gameplay.Features.Movement.Moving),
         typeof(Assets.Code.Gameplay.Features.Movement.Speed),
         typeof(Assets.Code.Gameplay.Features.Movement.TurnedAlongDirection),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.CollectTargetsInterval),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.CollectTargetsTimer),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.LayerMask),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.Radius),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.ReadyToCollectTargets),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.TargetsBuffer),
         typeof(Assets.Code.Gameplay.Input.AxisInput),
         typeof(Assets.Code.Gameplay.Input.Input)
     };

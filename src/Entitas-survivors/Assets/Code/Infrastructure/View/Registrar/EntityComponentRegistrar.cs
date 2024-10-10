@@ -2,7 +2,7 @@
 {
     public abstract class EntityComponentRegistrar : EntityDependant, IEntityComponentRegistrar
     {
-        public abstract void RegisterComponent();
-        public abstract void UnregisterComponent();
+        public abstract void RegisterComponents();
+        public abstract void UnregisterComponents();
     }
 }

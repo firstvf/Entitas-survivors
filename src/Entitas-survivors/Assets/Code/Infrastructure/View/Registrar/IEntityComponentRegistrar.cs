@@ -2,7 +2,7 @@
 {
     public interface IEntityComponentRegistrar
     {
-        void RegisterComponent();
-        void UnregisterComponent();
+        void RegisterComponents();
+        void UnregisterComponents();
     }
 }

@@ -7,7 +7,7 @@ namespace Assets.Code.Common.Destruct.Systems
     public class CleanupGameDestructedSystem : ICleanupSystem
     {
         private readonly IGroup<GameEntity> _entities;
-        private List<GameEntity> _buffer = new List<GameEntity>(64);
+        private List<GameEntity> _buffer = new(64);
 
         public CleanupGameDestructedSystem(GameContext game)
         {
