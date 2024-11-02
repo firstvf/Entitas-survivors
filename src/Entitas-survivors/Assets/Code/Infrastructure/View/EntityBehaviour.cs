@@ -8,8 +8,7 @@ namespace Assets.Code.Infrastructure.View
     public class EntityBehaviour : MonoBehaviour, IEntityView
     {
         private GameEntity _entity;
-        private ICollisionRegistry _collisionRegistry;
-
+        private ICollisionRegistry _collisionRegistry;  
         public GameEntity Entity => _entity;
 
         [Inject]

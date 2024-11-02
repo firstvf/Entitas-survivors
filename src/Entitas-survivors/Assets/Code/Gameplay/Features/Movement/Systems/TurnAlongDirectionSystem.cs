@@ -21,11 +21,16 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
 
         public void Execute()
         {
-            foreach (var mover in _movers)
+            foreach (var hero in _movers)
             {
-                float scale = Mathf.Abs(mover.SpriteRenderer.transform.localScale.x);
-                mover.SpriteRenderer.transform.SetScaleX(scale * FaceDirection(mover));
+                TurnAlongDirection(hero);
             }
+        }
+
+        private void TurnAlongDirection(GameEntity mover)
+        {
+            mover.SpriteRenderer.transform
+                .SetScaleX(Mathf.Abs(mover.SpriteRenderer.transform.localScale.x) * FaceDirection(mover));
         }
 
         private float FaceDirection(GameEntity mover)

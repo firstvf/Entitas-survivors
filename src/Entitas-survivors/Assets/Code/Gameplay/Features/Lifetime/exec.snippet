@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Execute system</Title>
+      <Author>vfirst</Author>
+      <Description>Entitas execute system template</Description>
+      <Shortcut>exec</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Entitas</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp">
+public class name : IExecuteSystem
+{
+    public name(GameContext game)
+    {
+        _entities = game.GetGroup(GameMatcher.AllOf());
+    }
+
+    public void Execute()
+    {
+        foreach (var entity in _entities)
+        {
+
+        } 
+    }
+}
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
