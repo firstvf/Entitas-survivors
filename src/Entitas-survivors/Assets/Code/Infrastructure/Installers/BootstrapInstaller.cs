@@ -1,4 +1,9 @@
+using Assets.Code.Gameplay.Features.Abilities.Factory;
+using Assets.Code.Gameplay.Features.Armaments.Factory;
+using Assets.Code.Gameplay.Features.Enemies.Factory;
+using Assets.Code.Gameplay.Features.Hero.Factory;
 using Assets.Code.Infrastructure.Systems;
+using Assets.Code.Infrastructure.View.Factory;
 using Code.Gameplay.Cameras.Provider;
 using Code.Gameplay.Common.Collisions;
 using Code.Gameplay.Common.Physics;
@@ -27,6 +32,7 @@ namespace Code.Infrastructure.Installers
             BindContexts();
             BindGameplayServices();
             BindCameraProvider();
+            BindGameplayFactories();
         }
 
         private void BindContexts()
@@ -45,6 +51,15 @@ namespace Code.Infrastructure.Installers
         {
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
             Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
+        }
+
+        private void BindGameplayFactories()
+        {
+            Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
+            Container.Bind<IHeroFactory>().To<HeroFactory>().AsSingle();
+            Container.Bind<IEnemyFactory>().To<EnemyFactory>().AsSingle();
+            Container.Bind<IArmamentFactory>().To<ArmamentFactory>().AsSingle();
+            Container.Bind<IAbilityFactory>().To<AbilityFactory>().AsSingle();
         }
 
         private void BindInfrastructureServices()

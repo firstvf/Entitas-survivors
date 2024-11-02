@@ -9,4 +9,5 @@ namespace Assets.Code.Infrastructure.View
         void SetEntity(GameEntity entity);
         GameObject gameObject { get; }
     }
+
 }

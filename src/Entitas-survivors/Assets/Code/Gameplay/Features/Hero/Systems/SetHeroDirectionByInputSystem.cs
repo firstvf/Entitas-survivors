@@ -10,8 +10,12 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
 
         public SetHeroDirectionByInputSystem(GameContext game)
         {
-            _heroes = game.GetGroup(GameMatcher.Hero);
             _input = game.GetGroup(GameMatcher.Input);
+            _heroes = game.GetGroup(
+                GameMatcher.AllOf(
+                GameMatcher.Hero,
+                GameMatcher.MovementAvailable
+                ));
         }
 
         public void Execute()
@@ -21,8 +25,8 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
                 {
                     hero.isMoving = input.hasAxisInput;
 
-                    if (input.hasAxisInput)                    
-                        hero.ReplaceDirection(input.AxisInput.normalized);                    
+                    if (input.hasAxisInput)
+                        hero.ReplaceDirection(input.AxisInput.normalized);
                 }
         }
     }

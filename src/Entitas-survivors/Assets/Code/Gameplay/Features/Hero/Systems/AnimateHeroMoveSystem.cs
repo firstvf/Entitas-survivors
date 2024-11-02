@@ -24,4 +24,5 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
             }
         }
     }
+
 }

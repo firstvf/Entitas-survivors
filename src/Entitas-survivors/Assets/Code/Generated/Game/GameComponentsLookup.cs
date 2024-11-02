@@ -11,58 +11,92 @@ public static class GameComponentsLookup {
     public const int Destructed = 0;
     public const int SelfDestructTimer = 1;
     public const int View = 2;
-    public const int Damage = 3;
-    public const int DamageTakenAnimator = 4;
-    public const int Id = 5;
-    public const int SpriteRenderer = 6;
-    public const int Transform = 7;
-    public const int WorldPosition = 8;
-    public const int Enemy = 9;
-    public const int EnemyAnimator = 10;
-    public const int EnemyTypeId = 11;
-    public const int Hero = 12;
-    public const int HeroAnimator = 13;
-    public const int CurrentHP = 14;
-    public const int MaxHP = 15;
-    public const int Direction = 16;
-    public const int Moving = 17;
-    public const int Speed = 18;
-    public const int TurnedAlongDirection = 19;
-    public const int CollectTargetsInterval = 20;
-    public const int CollectTargetsTimer = 21;
-    public const int LayerMask = 22;
-    public const int Radius = 23;
-    public const int ReadyToCollectTargets = 24;
-    public const int TargetsBuffer = 25;
-    public const int AxisInput = 26;
-    public const int Input = 27;
+    public const int ViewPath = 3;
+    public const int ViewPrefab = 4;
+    public const int Damage = 5;
+    public const int DamageTakenAnimator = 6;
+    public const int Id = 7;
+    public const int SpriteRenderer = 8;
+    public const int Transform = 9;
+    public const int WorldPosition = 10;
+    public const int AbilityId = 11;
+    public const int VegetableBoltAbility = 12;
+    public const int Armament = 13;
+    public const int Processed = 14;
+    public const int TargetLimit = 15;
+    public const int Cooldown = 16;
+    public const int CooldownLeft = 17;
+    public const int CooldownUp = 18;
+    public const int Enemy = 19;
+    public const int EnemyAnimator = 20;
+    public const int EnemyTypeId = 21;
+    public const int SpawnTimer = 22;
+    public const int Hero = 23;
+    public const int HeroAnimator = 24;
+    public const int CurrentHP = 25;
+    public const int Dead = 26;
+    public const int MaxHP = 27;
+    public const int ProcessingDeath = 28;
+    public const int Direction = 29;
+    public const int MovementAvailable = 30;
+    public const int Moving = 31;
+    public const int RotationAlignedAlongDirection = 32;
+    public const int Speed = 33;
+    public const int TurnedAlongDirection = 34;
+    public const int CollectingTargetsContinuously = 35;
+    public const int CollectTargetsInterval = 36;
+    public const int CollectTargetsTimer = 37;
+    public const int LayerMask = 38;
+    public const int ProcessedTargets = 39;
+    public const int Radius = 40;
+    public const int ReadyToCollectTargets = 41;
+    public const int TargetsBuffer = 42;
+    public const int AxisInput = 43;
+    public const int Input = 44;
 
-    public const int TotalComponents = 28;
+    public const int TotalComponents = 45;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "SelfDestructTimer",
         "View",
+        "ViewPath",
+        "ViewPrefab",
         "Damage",
         "DamageTakenAnimator",
         "Id",
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "AbilityId",
+        "VegetableBoltAbility",
+        "Armament",
+        "Processed",
+        "TargetLimit",
+        "Cooldown",
+        "CooldownLeft",
+        "CooldownUp",
         "Enemy",
         "EnemyAnimator",
         "EnemyTypeId",
+        "SpawnTimer",
         "Hero",
         "HeroAnimator",
         "CurrentHP",
+        "Dead",
         "MaxHP",
+        "ProcessingDeath",
         "Direction",
+        "MovementAvailable",
         "Moving",
+        "RotationAlignedAlongDirection",
         "Speed",
         "TurnedAlongDirection",
+        "CollectingTargetsContinuously",
         "CollectTargetsInterval",
         "CollectTargetsTimer",
         "LayerMask",
+        "ProcessedTargets",
         "Radius",
         "ReadyToCollectTargets",
         "TargetsBuffer",
@@ -74,26 +108,43 @@ public static class GameComponentsLookup {
         typeof(Assets.Code.Common.Destructed),
         typeof(Assets.Code.Common.SelfDestructTimer),
         typeof(Assets.Code.Common.View),
+        typeof(Assets.Code.Common.ViewPath),
+        typeof(Assets.Code.Common.ViewPrefab),
         typeof(Assets.Code.Gameplay.Common.Damage),
         typeof(Assets.Code.Gameplay.Common.DamageTakenAnimatorComponent),
         typeof(Assets.Code.Gameplay.Common.Id),
         typeof(Assets.Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Assets.Code.Gameplay.Common.TransformComponent),
         typeof(Assets.Code.Gameplay.Common.WorldPosition),
+        typeof(Assets.Code.Gameplay.Features.Abilities.AbilityIdComponent),
+        typeof(Assets.Code.Gameplay.Features.Abilities.VegetableBoltAbility),
+        typeof(Assets.Code.Gameplay.Features.Armaments.Armament),
+        typeof(Assets.Code.Gameplay.Features.Armaments.Processed),
+        typeof(Assets.Code.Gameplay.Features.Armaments.TargetLimit),
+        typeof(Assets.Code.Gameplay.Features.Cooldowns.Cooldown),
+        typeof(Assets.Code.Gameplay.Features.Cooldowns.CooldownLeft),
+        typeof(Assets.Code.Gameplay.Features.Cooldowns.CooldownUp),
         typeof(Assets.Code.Gameplay.Features.Enemies.Enemy),
         typeof(Assets.Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),
+        typeof(Assets.Code.Gameplay.Features.Enemies.SpawnTimer),
         typeof(Assets.Code.Gameplay.Features.Hero.Hero),
         typeof(Assets.Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Assets.Code.Gameplay.Features.Lifetime.CurrentHP),
+        typeof(Assets.Code.Gameplay.Features.Lifetime.Dead),
         typeof(Assets.Code.Gameplay.Features.Lifetime.MaxHP),
+        typeof(Assets.Code.Gameplay.Features.Lifetime.ProcessingDeath),
         typeof(Assets.Code.Gameplay.Features.Movement.Direction),
+        typeof(Assets.Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Assets.Code.Gameplay.Features.Movement.Moving),
+        typeof(Assets.Code.Gameplay.Features.Movement.RotationAlignedAlongDirection),
         typeof(Assets.Code.Gameplay.Features.Movement.Speed),
         typeof(Assets.Code.Gameplay.Features.Movement.TurnedAlongDirection),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.CollectingTargetsContinuously),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.CollectTargetsInterval),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.CollectTargetsTimer),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.LayerMask),
+        typeof(Assets.Code.Gameplay.Features.TargetCollection.ProcessedTargets),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.Radius),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.ReadyToCollectTargets),
         typeof(Assets.Code.Gameplay.Features.TargetCollection.TargetsBuffer),

@@ -13,8 +13,8 @@ namespace Assets.Code.Gameplay.Features.DamageApplication.Systems
             _game = game;
             _damageDealers = game.GetGroup(GameMatcher
                 .AllOf(
-                GameMatcher.Damage,
-                GameMatcher.DamageTakenAnimator
+                GameMatcher.TargetsBuffer,
+                GameMatcher.Damage
                 ));
         }
 

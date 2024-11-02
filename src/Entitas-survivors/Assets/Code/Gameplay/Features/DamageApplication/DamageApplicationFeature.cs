@@ -1,6 +1,6 @@
 ﻿using Assets.Code.Gameplay.Features.DamageApplication.Systems;
 using Assets.Code.Infrastructure.Systems;
-using UnityEngine;
+using Entitas;
 
 namespace Assets.Code.Gameplay.Features.DamageApplication
 {
@@ -9,7 +9,7 @@ namespace Assets.Code.Gameplay.Features.DamageApplication
         public DamageApplicationFeature(ISystemFactory systems)
         {
             Add(systems.Create<ApplyDamageOnTargetsSystem>());
-            Add(systems.Create<DestructOnZeroHPSystem>());
         }
     }
+
 }
