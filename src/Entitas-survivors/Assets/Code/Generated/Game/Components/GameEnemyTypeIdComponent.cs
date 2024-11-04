@@ -34,10 +34,10 @@ public sealed partial class GameMatcher {
 public partial class GameEntity {
 
     public Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent enemyTypeId { get { return (Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent)GetComponent(GameComponentsLookup.EnemyTypeId); } }
-    public Assets.Code.Gameplay.Features.Enemies.Enum.EnemyTypeId EnemyTypeId { get { return enemyTypeId.Value; } }
+    public Assets.Code.Gameplay.Features.Enemies.EnemyTypeId EnemyTypeId { get { return enemyTypeId.Value; } }
     public bool hasEnemyTypeId { get { return HasComponent(GameComponentsLookup.EnemyTypeId); } }
 
-    public GameEntity AddEnemyTypeId(Assets.Code.Gameplay.Features.Enemies.Enum.EnemyTypeId newValue) {
+    public GameEntity AddEnemyTypeId(Assets.Code.Gameplay.Features.Enemies.EnemyTypeId newValue) {
         var index = GameComponentsLookup.EnemyTypeId;
         var component = (Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent)CreateComponent(index, typeof(Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent));
         component.Value = newValue;
@@ -45,7 +45,7 @@ public partial class GameEntity {
         return this;
     }
 
-    public GameEntity ReplaceEnemyTypeId(Assets.Code.Gameplay.Features.Enemies.Enum.EnemyTypeId newValue) {
+    public GameEntity ReplaceEnemyTypeId(Assets.Code.Gameplay.Features.Enemies.EnemyTypeId newValue) {
         var index = GameComponentsLookup.EnemyTypeId;
         var component = (Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent)CreateComponent(index, typeof(Assets.Code.Gameplay.Features.Enemies.EnemyTypeIdComponent));
         component.Value = newValue;

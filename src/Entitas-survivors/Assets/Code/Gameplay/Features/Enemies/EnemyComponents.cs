@@ -1,5 +1,4 @@
-﻿using Assets.Code.Gameplay.Features.Enemies.Enum;
-using Code.Gameplay.Features.Enemies.Behaviours;
+﻿using Code.Gameplay.Features.Enemies.Behaviours;
 using Entitas;
 
 namespace Assets.Code.Gameplay.Features.Enemies

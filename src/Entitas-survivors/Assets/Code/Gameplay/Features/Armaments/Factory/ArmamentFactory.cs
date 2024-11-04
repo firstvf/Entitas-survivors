@@ -31,7 +31,8 @@ namespace Assets.Code.Gameplay.Features.Armaments.Factory
                 .AddViewPrefab(abilityLevel.ViewPrefab)
                 .AddWorldPosition(at)
                 .AddSpeed(setup.Speed)
-                .AddDamage(1)
+                .AddEffectSetups(abilityLevel.EffectSetups)
+                .AddStatusSetups(abilityLevel.StatusSetups)
                 .AddRadius(setup.ContactRadius)
                 .AddTargetsBuffer(new List<int>(TARGET_BUFFER_SIZE))
                 .AddProcessedTargets(new List<int>(TARGET_BUFFER_SIZE))
@@ -44,6 +45,31 @@ namespace Assets.Code.Gameplay.Features.Armaments.Factory
                 .AddSelfDestructTimer(setup.LifeTime)
                 ;
         }
-    }
 
+        public GameEntity CreateBouncingVegetableBolt(int level, Vector3 at)
+        {
+            var abilityLevel = _staticDataService.GetAbilityLevel(Abilities.AbilityId.BouncingVegetableBolt, level);
+            var setup = abilityLevel.ProjectileSetup;
+
+            return CreateEntity.Empty()
+                .AddId(_identifier.Next())
+                .With(x => x.isArmament = true)
+                .AddViewPrefab(abilityLevel.ViewPrefab)
+                .AddWorldPosition(at)
+                .AddSpeed(setup.Speed)
+                .AddEffectSetups(abilityLevel.EffectSetups)
+                .AddStatusSetups(abilityLevel.StatusSetups)
+                .AddRadius(setup.ContactRadius)
+                .AddTargetsBuffer(new List<int>(TARGET_BUFFER_SIZE))
+                .AddProcessedTargets(new List<int>(TARGET_BUFFER_SIZE))
+                .AddTargetLimit(setup.Pierce)
+                .AddLayerMask(CollisionLayer.Enemy.AsMask())
+                .With(x => x.isMovementAvailable = true)
+                .With(x => x.isReadyToCollectTargets = true)
+                .With(x => x.isCollectingTargetsContinuously = true)
+                .With(x => x.isRotationAlignedAlongDirection = true)
+                .AddSelfDestructTimer(setup.LifeTime)
+                ;
+        }
+    }
 }

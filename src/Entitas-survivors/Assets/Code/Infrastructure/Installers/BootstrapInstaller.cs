@@ -1,7 +1,11 @@
+using Assets.Code.Common.EntityIndices;
 using Assets.Code.Gameplay.Features.Abilities.Factory;
 using Assets.Code.Gameplay.Features.Armaments.Factory;
+using Assets.Code.Gameplay.Features.Effects.Factory;
 using Assets.Code.Gameplay.Features.Enemies.Factory;
 using Assets.Code.Gameplay.Features.Hero.Factory;
+using Assets.Code.Gameplay.Features.Statuses.Applier;
+using Assets.Code.Gameplay.Features.Statuses.Factory;
 using Assets.Code.Infrastructure.Systems;
 using Assets.Code.Infrastructure.View.Factory;
 using Code.Gameplay.Cameras.Provider;
@@ -15,7 +19,6 @@ using Code.Gameplay.StaticData;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Loading;
-using System;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -33,7 +36,9 @@ namespace Code.Infrastructure.Installers
             BindGameplayServices();
             BindCameraProvider();
             BindGameplayFactories();
+            BindEntityIndices();
         }
+
 
         private void BindContexts()
         {
@@ -51,6 +56,7 @@ namespace Code.Infrastructure.Installers
         {
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
             Container.Bind<ILevelDataProvider>().To<LevelDataProvider>().AsSingle();
+            Container.Bind<IStatusApplier>().To<StatusApplier>().AsSingle();
         }
 
         private void BindGameplayFactories()
@@ -60,6 +66,13 @@ namespace Code.Infrastructure.Installers
             Container.Bind<IEnemyFactory>().To<EnemyFactory>().AsSingle();
             Container.Bind<IArmamentFactory>().To<ArmamentFactory>().AsSingle();
             Container.Bind<IAbilityFactory>().To<AbilityFactory>().AsSingle();
+            Container.Bind<IEffectFactory>().To<EffectFactory>().AsSingle();
+            Container.Bind<IStatusFactory>().To<StatusFactory>().AsSingle();
+        }
+
+        private void BindEntityIndices()
+        {
+            Container.BindInterfacesAndSelfTo<GameEntityIndices>().AsSingle();
         }
 
         private void BindInfrastructureServices()

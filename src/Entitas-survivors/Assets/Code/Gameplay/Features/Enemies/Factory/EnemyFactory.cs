@@ -1,4 +1,4 @@
-﻿using Assets.Code.Gameplay.Features.Enemies.Enum;
+﻿using Assets.Code.Gameplay.Features.Effects;
 using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Infrastructure.Identifiers;
@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.Code.Gameplay.Features.Enemies.Factory
 {
-    public class EnemyFactory :IEnemyFactory
+    public class EnemyFactory : IEnemyFactory
     {
         private readonly IIdentifierService _identifiers;
 
@@ -31,23 +31,23 @@ namespace Assets.Code.Gameplay.Features.Enemies.Factory
         private GameEntity CreateGoblin(Vector2 position)
         {
             return CreateEntity.Empty()
-           .AddId(_identifiers.Next())
-           .AddEnemyTypeId(EnemyTypeId.Goblin)
-           .AddWorldPosition(position)
-           .AddDirection(Vector2.zero)
-           .AddSpeed(1)
-           .AddCurrentHP(3)
-           .AddMaxHP(3)
-           .AddDamage(1)
-           .AddRadius(0.3f)
-           .AddTargetsBuffer(new List<int>(1))
-           .AddCollectTargetsInterval(0.5f)
-           .AddCollectTargetsTimer(0)
-           .AddLayerMask(CollisionLayer.Hero.AsMask())
-           .AddViewPath("Gameplay/Enemies/Goblins/Torch/goblin_torch_blue")
-           .With(x => x.isEnemy = true)
-           .With(x => x.isTurnedAlongDirection = true)
-           .With(x => x.isMovementAvailable = true);
+             .AddId(_identifiers.Next())
+             .AddEnemyTypeId(EnemyTypeId.Goblin)
+             .AddWorldPosition(position)
+             .AddDirection(Vector2.zero)
+             .AddSpeed(1)
+             .AddCurrentHP(3)
+             .AddMaxHP(3)
+             .AddEffectSetups(new List<EffectSetup>() { new() { EffectTypeId = EffectTypeId.Damage, Value = 1 } })
+             .AddRadius(0.3f)
+             .AddTargetsBuffer(new List<int>(1))
+             .AddCollectTargetsInterval(0.5f)
+             .AddCollectTargetsTimer(0)
+             .AddLayerMask(CollisionLayer.Hero.AsMask())
+             .AddViewPath("Gameplay/Enemies/Goblins/Torch/goblin_torch_blue")
+             .With(x => x.isEnemy = true)
+             .With(x => x.isTurnedAlongDirection = true)
+             .With(x => x.isMovementAvailable = true);
         }
     }
 }

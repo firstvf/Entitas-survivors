@@ -22,6 +22,7 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
         {
             _heroFactory.CreateHero(_levelDataProvider.StartPoint);
             _abilityFactory.CreateVegetableBoltAbility(level: 1);
+            _abilityFactory.CreateBouncingVegetableBoltAbility(level: 1);
         }
     }
 }

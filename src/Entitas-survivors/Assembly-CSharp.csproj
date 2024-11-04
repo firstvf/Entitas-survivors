@@ -65,181 +65,232 @@
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\InitializeSpawnTimerSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\TargetCollectionEntityExtensions.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameMovementAvailableComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Behaviours\EnemyAnimator.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroComponents.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\DeathFeature.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameRadiusComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\Scenes.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\EnemyComponents.cs" />
-    <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CleanupTargetBuffersSystem.cs" />
-    <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameArmamentComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\SetHeroDirectionByInputSystem.cs" />
-    <Compile Include="Assets\Code\Generated\Game\GameComponentsLookup.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameViewComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\ProjectileSetup.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownLeftComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\CommonComponents.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\Random\IRandomService.cs" />
-    <Compile Include="Assets\Code\Gameplay\Input\Systems\InitializeInputSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroFeature.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameTargetLimitComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameIdComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameCurrentHPComponent.cs" />
-    <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownUpComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentFeature.cs" />
-    <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameViewPrefabComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameVegetableBoltAbilityComponent.cs" />
-    <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\Registrar\TransformRegistrar.cs" />
-    <Compile Include="Assets\Code\Common\Destruct\ProcessDestructedFeature.cs" />
-    <Compile Include="Assets\Code\Infrastructure\EcsRunner.cs" />
-    <Compile Include="Assets\Code\Common\Destruct\SelfDestructor.cs" />
-    <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
-    <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
-    <Compile Include="Assets\Code\Infrastructure\View\Registrar\EntityComponentRegistrar.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameDeadComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Common\GameplayConstants.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Contexts.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Input\InputComponents.cs" />
-    <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentsComponents.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameTransformComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Feature.cs" />
-    <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Armaments\Factory\ArmamentFactory.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
-    <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
-    <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\FinalizeEnemyDeathProcessingSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Abilities\Systems\VegetableBoltAbilitySystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsWithLimitSystem.cs" />
-    <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownComponents.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
-    <Compile Include="Assets\Code\Common\Destruct\Systems\SelfDestructTimerSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameAbilityIdComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedTargetsComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\ChaseHeroSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Factory\EnemyFactory.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameTargetsBufferComponent.cs" />
-    <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\StaticData\StaticDataService.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Behaviours\EnemyAnimator.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Factory\HeroFactory.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\EnemyComponents.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Registrars\HeroAnimatorRegistrar.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\Factory\EffectFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Armaments\Factory\IArmamentFactory.cs" />
     <Compile Include="Assets\Code\Common\Extensions\CollisionExtensions.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Armaments\Systems\MarkProcessedOnTargetLimitExceededSystem.cs" />
+    <Compile Include="Assets\Code\Common\Extensions\VectorExtensions.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameUnappliedComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameDirectionComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CleanupTargetBuffersSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisualFeature.cs" />
     <Compile Include="Assets\Code\Common\Destruct\Systems\CleanupGameDestructedViewSystem.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameViewPathComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameRotationAlignedAlongDirectionComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\GameEntity.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\BindViewFeature.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Time\UnityTimeService.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameViewPathComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Applier\StatusApplier.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\PeriodicDamageStatusSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\ApplyStatusesOnTargetsSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Physics\PhysicsService.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectComponents.cs" />
     <Compile Include="Assets\Code\Common\Destruct\Systems\CleanupGameDestructedSystem.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameDestructedComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusFeature.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameArmamentComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\SetHeroDirectionByInputSystem.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameAttribute.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\DeathFeature.cs" />
     <Compile Include="Assets\Code\Common\Entity\CreateEntity.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\EnemyFeature.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementFeature.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameInputComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\SceneLoader.cs" />
+    <Compile Include="Assets\Code\Generated\Game\GameComponentsLookup.cs" />
     <Compile Include="Assets\Code\Gameplay\Input\Service\StandaloneInputService.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameViewComponent.cs" />
+    <Compile Include="Assets\Code\Common\EntityIndices\GameEntityIndices.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\ProjectileSetup.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameEffectComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\GameContext.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\EnemySpawnSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Abilities\Systems\BouncingVegetableBoltAbilitySystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\UnapplyStatusesOfDeadTargetSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Registrar\SpriteRendererRegistrar.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownLeftComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Registrar\EnemyAnimatorRegistrar.cs" />
     <Compile Include="Assets\Code\Infrastructure\Installers\LevelInitializable.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameMaxHPComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Physics\IPhysicsService.cs" />
     <Compile Include="Assets\Code\Common\Entity\ToStrings\GameEntity.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\CleanupProcessedEffects.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\SelfInitializedEntityView.cs" />
     <Compile Include="Assets\Code\Infrastructure\Systems\SystemFactory.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusComponents.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\CommonComponents.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Random\IRandomService.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\Factory\IAbilityFactory.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\Factory\EntityViewFactory.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectSetup.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusTypeId.cs" />
+    <Compile Include="Assets\Code\Gameplay\Input\Systems\InitializeInputSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Visuals\StatusVisuals\StatusVisuals.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameSpriteRendererComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\RemoveEffectsWithoutTargetsSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Hero\HeroFeature.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameProducerIdComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTargetLimitComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameIdComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameWorldPositionComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\EffectApplicationFeature.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\Factory\IEntityViewFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\RotateAlongDirectionSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameCurrentHPComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusDurationSystem.cs" />
+    <Compile Include="Assets\Code\Common\Extensions\TransformExtensions.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\Registrar\IEntityComponentRegistrar.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Applier\IStatusApplier.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Collisions\CollisionRegistry.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\MarkDeadSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownUpComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\SwitchToEntrySceneInEditor.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameStatusVisualsComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Collisions\ICollisionRegistry.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentFeature.cs" />
+    <Compile Include="Assets\Code\Gameplay\Cameras\Provider\ICameraProvider.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\EffectApplication\Systems\ApplyEffectsOnTargetsSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Factory\IEnemyFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\UpdateTransformPositionSystem.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\Systems\MarkDeadSystem.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameDamageComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameViewPrefabComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\FinalizeHeroDeathProcessingSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\AbilityId.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameVegetableBoltAbilityComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Cameras\Systems\CameraFollowHeroSystem.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsIntervalComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\Systems\BindEntityViewFromPrefabSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Factory\IStatusFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\TurnAlongDirectionSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\AbilityLevel.cs" />
     <Compile Include="Assets\Code\Infrastructure\Loading\ISceneLoader.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameLayerMaskComponent.cs" />
-    <Compile Include="Assets\Code\Generated\Game\Components\GameDamageTakenAnimatorComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameProcessingDeathComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\Systems\ApplyDamageOnTargetsSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameDamageTakenAnimatorComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\InitializeHeroSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Levels\ILevelDataProvider.cs" />
+    <Compile Include="Assets\Code\Infrastructure\View\IEntityView.cs" />
     <Compile Include="Assets\Code\Common\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameStatusComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Levels\LevelDataProvider.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Registrar\TransformRegistrar.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\Factory\IEffectFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\Configs\AbilityConfig.cs" />
+    <Compile Include="Assets\Code\Common\Destruct\ProcessDestructedFeature.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameSpawnTimerComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectTypeId.cs" />
+    <Compile Include="Assets\Code\Infrastructure\EcsRunner.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\CleanupUnappliedStatuses.cs" />
+    <Compile Include="Assets\Code\Common\Destruct\SelfDestructor.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectFeature.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\Systems\ProcessDamageEffectSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKey.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsNoLimitSystem.cs" />
     <Compile Include="Assets\Code\Common\Entity\ToStrings\EntityPrinter.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Armaments\Systems\FinalizeProcessedArmamentsSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Input\Systems\EmitInputSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Factory\StatusFactory.cs" />
+    <Compile Include="Assets\Code\Infrastructure\Systems\ISystemFactory.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Indexing\StatusKeyEqualityComparer.cs" />
+    <Compile Include="Assets\Code\Infrastructure\View\Registrar\EntityComponentRegistrar.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\UnapplyPoisonVisualsSystem.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameSpeedComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Random\UnityRandomService.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameDeadComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\GameplayConstants.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameEffectSetupsComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameDamageEffectComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameMovingComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Contexts.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameCollectTargetsTimerComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameAxisInputComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Input\InputComponents.cs" />
+    <Compile Include="Assets\Code\Gameplay\BattleFeature.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Armaments\ArmamentsComponents.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Factory\IHeroFactory.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\Systems\BindEntityViewFromPathSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTransformComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameHeroComponent.cs" />
     <Compile Include="Assets\Code\Common\Extensions\NumericExtensions.cs" />
+    <Compile Include="Assets\Code\Generated\Feature.cs" />
     <Compile Include="Assets\Code\Gameplay\StaticData\IStaticDataService.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\Systems\CooldownSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameDurationComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\Factory\AbilityFactory.cs" />
+    <Compile Include="Assets\Code\Infrastructure\AssetManagement\IAssetProvider.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\Systems\CooldownSystem.cs" />
     <Compile Include="Assets\Code\Common\CommonComponents.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GamePoisonComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Armaments\Factory\ArmamentFactory.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Movement\MovementComponents.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameEffectValueComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTurnedAlongDirectionComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameCollectingTargetsContinuouslyComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameStatusSetupsComponent.cs" />
+    <Compile Include="Assets\Code\Infrastructure\View\EntityBehaviour.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTargetIdComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameCooldownComponent.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Enum\EnemyTypeId.cs" />
+    <Compile Include="Assets\Code\Infrastructure\Identifiers\IIdentifierService.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\FinalizeEnemyDeathProcessingSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Registrar\StatusVisualsRegistrar.cs" />
     <Compile Include="Assets\Code\Gameplay\Input\InputFeature.cs" />
     <Compile Include="Assets\Code\Infrastructure\ICoroutineRunner.cs" />
     <Compile Include="Assets\Code\Infrastructure\AssetManagement\AssetProvider.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Lifetime\LifetimeComponents.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\TargetCollectionComponents.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyTypeIdComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameStatusTypeIdComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\EnemyDeathSystem.cs" />
     <Compile Include="Assets\Code\Common\Extensions\FunctionalExtensions.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Effects\EffectEntityExtensions.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameEnemyAnimatorComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\StatusSetup.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Time\ITimeService.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CollectTargetsIntervalSystem.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\AbilityFeature.cs" />
-    <Compile Include="Assets\Code\Gameplay\Features\DamageApplication\DamageApplicationFeature.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Abilities\Systems\VegetableBoltAbilitySystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\Systems\CastForTargetsWithLimitSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Hero\Behaviours\HeroAnimator.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Statuses\Systems\StatusVisuals\ApplyPoisonVisualsSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GamePeriodComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Cooldowns\CooldownComponents.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameSelfDestructTimerComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameHeroAnimatorComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Common\Visuals\StatusVisuals\IStatusVisuals.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTimeSinceLastTickComponent.cs" />
     <Compile Include="Assets\Code\Gameplay\Input\Service\IInputService.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameBouncingVegetableBoltAbilityComponent.cs" />
     <Compile Include="Assets\Code\Common\Entity\ToStrings\INamedEntity.cs" />
     <Compile Include="Assets\Code\Gameplay\Common\Visuals\IDamageTakenAnimator.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\HeroDeathSystem.cs" />
+    <Compile Include="Assets\Code\Common\Destruct\Systems\SelfDestructTimerSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Cameras\Provider\CameraProvider.cs" />
     <Compile Include="Assets\Code\Gameplay\Features\Abilities\AbilityComponents.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTimeLeftComponent.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameAbilityIdComponent.cs" />
     <Compile Include="Assets\Code\Infrastructure\View\EntityDependant.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameProcessedTargetsComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Systems\ChaseHeroSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\Factory\EnemyFactory.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameTargetsBufferComponent.cs" />
+    <Compile Include="Assets\Code\Infrastructure\Identifiers\IdentifierService.cs" />
     <Compile Include="Assets\Code\Infrastructure\Installers\SceneInitializationInstaller.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\TargetCollection\CollectTargetFeature.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Hero\Systems\AnimateHeroMoveSystem.cs" />
+    <Compile Include="Assets\Code\Generated\Game\Components\GameAppliedComponent.cs" />
     <Compile Include="Assets\Code\Generated\Game\Components\GameReadyToCollectTargetsComponent.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Movement\Systems\DirectionalDeltaMoveSystem.cs" />
+    <Compile Include="Assets\Code\Gameplay\Features\Enemies\EnemyTypeId.cs" />
+    <Compile Include="Assets\Code\Gameplay\StaticData\StaticDataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -660,10 +711,6 @@
     </Reference>
     <Reference Include="DesperateDevs.Caching">
       <HintPath>Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
@@ -1234,20 +1281,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
@@ -1258,16 +1297,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Aseprite.Common">
@@ -1282,14 +1321,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.005.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
       <Private>False</Private>
@@ -1302,20 +1333,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections">
@@ -1332,10 +1355,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
@@ -1360,10 +1379,6 @@
     </Reference>
     <Reference Include="Unity.2D.Aseprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">

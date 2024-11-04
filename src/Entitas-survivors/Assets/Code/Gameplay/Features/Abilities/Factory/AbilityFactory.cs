@@ -18,6 +18,7 @@ namespace Assets.Code.Gameplay.Features.Abilities.Factory
             _staticDataService = staticDataService;
         }
 
+
         public GameEntity CreateVegetableBoltAbility(int level)
         {
             var abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.VegetableBolt, level);
@@ -27,6 +28,18 @@ namespace Assets.Code.Gameplay.Features.Abilities.Factory
                 .AddAbilityId(AbilityId.VegetableBolt)
                 .AddCooldown(abilityLevel.Cooldown)
                 .With(x => x.isVegetableBoltAbility = true)
+                .PutOnCooldown();
+        }
+
+        public GameEntity CreateBouncingVegetableBoltAbility(int level)
+        {
+            var abilityLevel = _staticDataService.GetAbilityLevel(AbilityId.VegetableBolt, level);
+
+            return CreateEntity.Empty()
+                .AddId(_identifier.Next())
+                .AddAbilityId(AbilityId.BouncingVegetableBolt)
+                .AddCooldown(abilityLevel.Cooldown)
+                .With(x => x.isBouncingVegetableBoltAbility = true)
                 .PutOnCooldown();
         }
     }
