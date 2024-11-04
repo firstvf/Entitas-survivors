@@ -3,10 +3,8 @@ using Assets.Code.Gameplay.Features.Cooldowns;
 using Code.Common.Extensions;
 using Code.Gameplay.StaticData;
 using Entitas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace Assets.Code.Gameplay.Features.Abilities.Systems
 {
@@ -45,7 +43,6 @@ namespace Assets.Code.Gameplay.Features.Abilities.Systems
 
         public void Execute()
         {
-
             foreach (var ability in _abilities.GetEntities(_buffer))
                 foreach (var hero in _heroes)
                 {
@@ -54,6 +51,7 @@ namespace Assets.Code.Gameplay.Features.Abilities.Systems
 
                     _armamentFactory
                         .CreateVegetableBolt(1, hero.WorldPosition)
+                        .AddProducerId(hero.Id)
                         .ReplaceDirection((FirsAvailableTarget().WorldPosition - hero.WorldPosition).normalized)
                         .With(x => x.isMoving = true);
 

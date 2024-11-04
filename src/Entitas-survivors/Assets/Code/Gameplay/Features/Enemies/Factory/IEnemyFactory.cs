@@ -1,5 +1,4 @@
-﻿using Assets.Code.Gameplay.Features.Enemies.Enum;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Code.Gameplay.Features.Enemies.Factory
 {

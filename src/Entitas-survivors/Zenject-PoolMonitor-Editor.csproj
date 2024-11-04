@@ -60,9 +60,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\MemoryPoolMonitor\Editor\DebugWindow\MpmWindow.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\MemoryPoolMonitor\Editor\DebugWindow\MpmView.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\MemoryPoolMonitor\Editor\DebugWindow\InPlaceStableSort.cs" />
+    <Compile Include="Assets\Plugins\Zenject\OptionalExtras\MemoryPoolMonitor\Editor\DebugWindow\MpmWindow.cs" />
     <Compile Include="Assets\Plugins\Zenject\OptionalExtras\MemoryPoolMonitor\Editor\MpmSettingsInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -437,10 +437,6 @@
       <HintPath>Assets\Entitas\Sherlog\Sherlog.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DesperateDevs.Reflection">
       <HintPath>Assets\Entitas\DesperateDevs\DesperateDevs.Reflection.dll</HintPath>
       <Private>False</Private>
@@ -481,10 +477,6 @@
       <HintPath>Assets\Entitas\DesperateDevs\DesperateDevs.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DesperateDevs.Unity">
       <HintPath>Assets\Entitas\DesperateDevs\DesperateDevs.Unity.dll</HintPath>
       <Private>False</Private>
@@ -499,10 +491,6 @@
     </Reference>
     <Reference Include="DesperateDevs.Caching">
       <HintPath>Assets\Entitas\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Entitas.Unity.Editor">
@@ -527,10 +515,6 @@
     </Reference>
     <Reference Include="DesperateDevs.Unity.Editor">
       <HintPath>Assets\Entitas\DesperateDevs\Editor\DesperateDevs.Unity.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.2\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sherlog.Formatters">

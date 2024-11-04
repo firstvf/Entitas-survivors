@@ -3,5 +3,6 @@
     public interface IAbilityFactory
     {
         GameEntity CreateVegetableBoltAbility(int level);
+        GameEntity CreateBouncingVegetableBoltAbility(int level);
     }
 }
