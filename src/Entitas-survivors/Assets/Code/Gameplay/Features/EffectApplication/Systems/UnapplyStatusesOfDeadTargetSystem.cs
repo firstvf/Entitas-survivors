@@ -27,8 +27,8 @@ namespace Assets.Code.Gameplay.Features.EffectApplication.Systems
             foreach (var entity in _dead)
                 foreach (var status in _statuses)
                 {
-                    if (status.TargetId == entity.Id)
-                        status.isUnapplied = true;
+                    if (status.TargetId == entity.Id)                    
+                        status.isUnapplied = true;                    
                 }
         }
     }

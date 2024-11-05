@@ -18,7 +18,12 @@ MonoBehaviour:
     ViewPrefab: {fileID: 3396932129544418202, guid: 0232553f5ccc2b748bb4ed3835f5f89e, type: 3}
     EffectSetups:
     - EffectTypeId: 1
-      Value: 2
+      Value: 0
+    StatusSetups:
+    - StatusTypeId: 1
+      Value: 1
+      Duration: 3
+      Period: 1
     ProjectileSetup:
       Speed: 3
       Pierce: 5
