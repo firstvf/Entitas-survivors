@@ -1,13 +1,14 @@
-﻿using Code.Common.Entity;
+﻿using Assets.Code.Gameplay.Features.CharacterStats;
+using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Infrastructure.Identifiers;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Code.Gameplay.Features.Hero.Factory
 {
     public class HeroFactory : IHeroFactory
     {
-        private const int HERO_HP = 100;
         private readonly IIdentifierService _identifier;
 
         public HeroFactory(IIdentifierService identifier)
@@ -17,13 +18,19 @@ namespace Assets.Code.Gameplay.Features.Hero.Factory
 
         public GameEntity CreateHero(Vector3 at)
         {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.Speed] = 2)
+                .With(x => x[Stats.MaxHp] = 100);
+
             return CreateEntity.Empty()
-               .AddId(_identifier.Next())
+              .AddId(_identifier.Next())
               .AddWorldPosition(at)
+              .AddBaseStats(baseStats)
+              .AddStatsModifiers(InitStats.EmptyStatDictionary())
               .AddDirection(Vector2.zero)
-              .AddSpeed(2)
-              .AddMaxHP(HERO_HP)
-              .AddCurrentHP(HERO_HP)
+              .AddSpeed(baseStats[Stats.Speed])
+              .AddMaxHP(baseStats[Stats.MaxHp])
+              .AddCurrentHP(baseStats[Stats.MaxHp])
               .AddViewPath("Gameplay/Hero/hero")
               .With(x => x.isHero = true)
               .With(x => x.isTurnedAlongDirection = true)

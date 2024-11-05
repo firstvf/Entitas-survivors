@@ -35,7 +35,7 @@ namespace Assets.Code.Gameplay.Common.Visuals.StatusVisuals
             Renderer.material.SetColor(OutlineColorProperty, Color.white);
             Renderer.material.SetFloat(OutlineSizeProperty, 0f);
             Renderer.material.SetFloat(OutlineSmoothnessProperty, 0f);
-            Animator.speed = 0;
+            Animator.speed = 1;
         }
 
         public void ApplyPoison()

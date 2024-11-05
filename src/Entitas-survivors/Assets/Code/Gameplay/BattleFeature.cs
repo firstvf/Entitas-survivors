@@ -1,6 +1,7 @@
 ﻿using Assets.Code.Common.Destruct;
 using Assets.Code.Gameplay.Features.Abilities;
 using Assets.Code.Gameplay.Features.Armaments;
+using Assets.Code.Gameplay.Features.CharacterStats;
 using Assets.Code.Gameplay.Features.EffectApplication;
 using Assets.Code.Gameplay.Features.Effects;
 using Assets.Code.Gameplay.Features.Enemies;
@@ -30,11 +31,13 @@ namespace Assets.Code.Gameplay
             Add(systems.Create<AbilityFeature>());
             //
             Add(systems.Create<ArmamentFeature>());
-            Add(systems.Create<EffectFeature>());
-            Add(systems.Create<StatusFeature>());
             //
             Add(systems.Create<CollectTargetFeature>());
             Add(systems.Create<EffectApplicationFeature>());
+            //
+            Add(systems.Create<EffectFeature>());
+            Add(systems.Create<StatusFeature>());
+            Add(systems.Create<StatsFeature>());
             //
             Add(systems.Create<ProcessDestructedFeature>());
         }

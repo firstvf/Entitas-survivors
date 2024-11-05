@@ -39,7 +39,6 @@ namespace Code.Infrastructure.Installers
             BindEntityIndices();
         }
 
-
         private void BindContexts()
         {
             Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
