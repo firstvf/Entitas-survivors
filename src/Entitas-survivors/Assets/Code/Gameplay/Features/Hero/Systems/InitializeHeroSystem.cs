@@ -11,7 +11,7 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
         private readonly ILevelDataProvider _levelDataProvider;
         private readonly IAbilityFactory _abilityFactory;
 
-        public InitializeHeroSystem(IHeroFactory heroFactory, ILevelDataProvider levelDataProvider ,IAbilityFactory abilityFactory)
+        public InitializeHeroSystem(IHeroFactory heroFactory, ILevelDataProvider levelDataProvider, IAbilityFactory abilityFactory)
         {
             _heroFactory = heroFactory;
             _levelDataProvider = levelDataProvider;
@@ -21,8 +21,10 @@ namespace Assets.Code.Gameplay.Features.Hero.Systems
         public void Initialize()
         {
             _heroFactory.CreateHero(_levelDataProvider.StartPoint);
-            _abilityFactory.CreateVegetableBoltAbility(level: 1);
-            _abilityFactory.CreateBouncingVegetableBoltAbility(level: 1);
+            // _abilityFactory.CreateVegetableBoltAbility(level: 1);
+            //_abilityFactory.CreateBouncingVegetableBoltAbility(level: 1);
+            _abilityFactory.CreateOrbitingMushroomAbility(level: 1);
+            _abilityFactory.CreateGarlicAuraAbility();
         }
     }
 }

@@ -10,7 +10,9 @@ namespace Assets.Code.Gameplay.Features.Abilities
         {
             Add(systems.Create<CooldownSystem>());
             Add(systems.Create<VegetableBoltAbilitySystem>());
-           // Add(systems.Create<BouncingVegetableBoltAbilitySystem>());
+            Add(systems.Create<OrbitingMushroomAbilitySystem>());
+            Add(systems.Create<GarlicAuraAbilitySystem>());
+            Add(systems.Create<BouncingVegetableBoltAbilitySystem>());
         }
     }
 }

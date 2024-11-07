@@ -4,5 +4,7 @@
     {
         GameEntity CreateVegetableBoltAbility(int level);
         GameEntity CreateBouncingVegetableBoltAbility(int level);
+        GameEntity CreateOrbitingMushroomAbility(int level);        
+        GameEntity CreateGarlicAuraAbility();
     }
 }
