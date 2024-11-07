@@ -7,11 +7,11 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
     public class DirectionalDeltaMoveSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _movers;
-        private readonly ITimeService _timeService;
+        private readonly ITimeService _time;
 
         public DirectionalDeltaMoveSystem(GameContext game, ITimeService timeService)
         {
-            _timeService = timeService;
+            _time = timeService;
             _movers = game.GetGroup(GameMatcher
                 .AllOf(
                 GameMatcher.WorldPosition,
@@ -25,7 +25,7 @@ namespace Assets.Code.Gameplay.Features.Movement.Systems
         {
             foreach (var mover in _movers)
                 if (mover.isMoving)
-                    mover.ReplaceWorldPosition((Vector2)mover.WorldPosition + _timeService.DeltaTime * mover.Speed * mover.Direction);
+                    mover.ReplaceWorldPosition((Vector2)mover.WorldPosition + _time.DeltaTime * mover.Speed * mover.Direction);
         }
     }
 }
